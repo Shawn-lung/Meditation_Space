@@ -1,0 +1,10 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1000" fill="#f0f5f2"/>
+  <!-- Blue classroom areas -->
+  <rect x="100" y="100" width="200" height="200" fill="#9bafd9" opacity="0.7" rx="20"/>
+  <rect x="700" y="100" width="200" height="200" fill="#9bafd9" opacity="0.7" rx="20"/>
+  <!-- Green yoga mat areas -->
+  <rect x="400" y="400" width="200" height="200" fill="#6a8d73" opacity="0.7" rx="100"/>
+  <rect x="100" y="700" width="200" height="200" fill="#6a8d73" opacity="0.7" rx="100"/>
+  <rect x="700" y="700" width="200" height="200" fill="#6a8d73" opacity="0.7" rx="100"/>
+</svg>

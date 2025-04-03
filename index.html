@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冥想空間 | Meditation Space</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="css/avatar.css" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Add YouTube API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>冥想空間 | Meditation Space</h1>
+      </header>
+
+      <div class="instructions">
+        <h3>歡迎來到冥想空間！| Welcome to Meditation Space!</h3>
+        <ul>
+          <li>
+            使用鍵盤上的方向鍵或WASD移動您的角色 | Use arrow keys or WASD to
+            move your character
+          </li>
+          <li>
+            走進藍色區域（教室）觀看冥想教學視頻 | Walk into blue areas
+            (classrooms) to watch meditation tutorials
+          </li>
+          <li>
+            走進綠色區域（瑜伽墊）聆聽放鬆音樂 | Walk into green areas (yoga
+            mats) to listen to relaxing music
+          </li>
+        </ul>
+      </div>
+
+      <div class="avatar-selection">
+        <h3>選擇您的角色 | Choose your avatar</h3>
+        <div class="avatar-options">
+          <div class="avatar-option selected" data-avatar="default">
+            <div class="avatar-preview">
+              <img
+                src="assets/images/avatars/default.png"
+                alt="Default Avatar"
+              />
+            </div>
+            <span>默認 | Default</span>
+          </div>
+          <div class="avatar-option" data-avatar="lotus">
+            <div class="avatar-preview">
+              <img src="assets/images/avatars/lotus.png" alt="Lotus Avatar" />
+            </div>
+            <span>蓮花 | Lotus</span>
+          </div>
+          <div class="avatar-option" data-avatar="zen">
+            <div class="avatar-preview">
+              <img src="assets/images/avatars/zen.png" alt="Zen Avatar" />
+            </div>
+            <span>禪 | Zen</span>
+          </div>
+          <div class="avatar-option" data-avatar="guru">
+            <div class="avatar-preview">
+              <img src="assets/images/avatars/guru.png" alt="Guru Avatar" />
+            </div>
+            <span>導師 | Guru</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="virtual-space">
+        <canvas id="meditation-canvas"></canvas>
+        <div id="area-info" class="area-info">
+          <span id="area-name">Area Name</span>
+        </div>
+        <div class="controls-info">
+          <span>方向鍵或WASD移動 | Arrow keys or WASD to move</span>
+        </div>
+        <div id="audio-controls">
+          <span id="audio-name">Relaxing Sounds</span>
+          <button id="stop-audio"><i class="fas fa-stop"></i></button>
+        </div>
+      </div>
+
+      <div id="video-modal">
+        <div id="video-content">
+          <!-- Video content will be inserted here dynamically -->
+        </div>
+      </div>
+
+      <main class="meditation-space">
+        <div class="space-background"></div>
+
+        <div class="media-player">
+          <h2>冥想媒體 | Meditation Media</h2>
+          <div class="media-list">
+            <!-- Media items will be loaded via JavaScript -->
+          </div>
+          <div class="media-controls">
+            <button id="play-pause"><i class="fas fa-play"></i></button>
+            <div class="volume-control">
+              <i class="fas fa-volume-up"></i>
+              <input type="range" id="volume" min="0" max="100" value="50" />
+            </div>
+          </div>
+        </div>
+
+        <div class="comments-section">
+          <h2>留言板 | Comments</h2>
+          <div class="comments-list">
+            <!-- Comments will be loaded via JavaScript -->
+          </div>
+          <form id="comment-form">
+            <textarea
+              id="comment-text"
+              placeholder="分享您的冥想體驗..."
+            ></textarea>
+            <input type="text" id="comment-name" placeholder="您的名字" />
+            <button type="submit">發送 | Send</button>
+          </form>
+        </div>
+
+        <div class="questionnaire">
+          <h2>問卷調查 | Questionnaire</h2>
+          <button id="open-questionnaire">填寫問卷 | Open Questionnaire</button>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2023 冥想空間 | Meditation Space</p>
+      </footer>
+    </div>
+
+    <div class="modal" id="questionnaire-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>冥想體驗問卷 | Meditation Experience Survey</h2>
+        <form id="questionnaire-form">
+          <!-- Questionnaire items will be loaded via JavaScript -->
+          <button type="submit">提交 | Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts/character.js"></script>
+    <script src="scripts/environment.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/media.js"></script>
+    <script src="scripts/comments.js"></script>
+    <script src="scripts/questionnaire.js"></script>
+  </body>
+</html>
